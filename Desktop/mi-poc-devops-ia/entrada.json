@@ -1,0 +1,99 @@
+{
+  "proyecto": "DevOps Pipeline",
+  "version": "1.0.0",
+  "configuracion": {
+    "ci_cd": {
+      "pipeline": "GitHub Actions",
+      "stages": ["build", "test", "deploy"],
+      "artifacts": ["docker-image", "helm-chart"]
+    },
+    "infraestructura": {
+      "cloud_provider": "AWS",
+      "region": "us-east-1",
+      "services": ["EC2", "RDS", "S3", "Lambda"],
+      "monitoring": ["CloudWatch", "Prometheus", "Grafana"]
+    }
+  },
+  "despliegues": [
+    {
+      "entorno": "desarrollo",
+      "estado": "activo",
+      "recursos": {
+        "instancias": 2,
+        "almacenamiento_gb": 100,
+        "balanceador_carga": true
+      },
+      "metricas": {
+        "uptime": "99.5%",
+        "tiempo_respuesta_ms": 250,
+        "cpu_utilizacion": "45%"
+      }
+    },
+    {
+      "entorno": "produccion",
+      "estado": "activo",
+      "recursos": {
+        "instancias": 5,
+        "almacenamiento_gb": 500,
+        "balanceador_carga": true
+      },
+      "metricas": {
+        "uptime": "99.9%",
+        "tiempo_respuesta_ms": 150,
+        "cpu_utilizacion": "60%"
+      }
+    }
+  ],
+  "seguridad": {
+    "firewall": "AWS Security Groups",
+    "ssl": true,
+    "autenticacion": ["OAuth2", "JWT"],
+    "auditoria": ["CloudTrail", "GuardDuty"]
+  },
+  "equipo": [
+    {
+      "rol": "DevOps Engineer",
+      "nombre": "Ana Martínez",
+      "responsabilidades": ["CI/CD", "Infraestructura", "Monitoreo"]
+    },
+    {
+      "rol": "Desarrollador",
+      "nombre": "Carlos Rodríguez",
+      "responsabilidades": ["Código", "Pruebas", "Documentación"]
+    }
+  ],
+  "historial": [
+    {
+      "fecha": "2024-03-15",
+      "evento": "Despliegue exitoso",
+      "version": "1.0.0",
+      "detalles": "Primera versión en producción"
+    },
+    {
+      "fecha": "2024-03-10",
+      "evento": "Pruebas automatizadas",
+      "version": "0.9.0",
+      "detalles": "95% de cobertura de pruebas"
+    }
+  ],
+  "alertas": [
+    {
+      "nivel": "critico",
+      "mensaje": "Uso de CPU superior al 80%",
+      "entorno": "produccion",
+      "timestamp": "2024-03-20T14:30:00Z"
+    },
+    {
+      "nivel": "advertencia",
+      "mensaje": "Espacio de almacenamiento bajo",
+      "entorno": "desarrollo",
+      "timestamp": "2024-03-20T12:15:00Z"
+    }
+  ],
+  "metadatos": {
+    "creado": "2024-03-20T10:00:00Z",
+    "actualizado": "2024-03-20T14:30:00Z",
+    "tags": ["devops", "ci-cd", "aws", "docker", "kubernetes"],
+    "estado_general": "operativo"
+  }
+}
