@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Saludo de IA
-        run: echo "¡La automatización está viva!"
+        run: echo "¡La automatización está vivaaaaaaaaaaaaaaaaa!"
