@@ -1,0 +1,7 @@
+echo "name: PoC-Final
+on: [push]
+jobs:
+  saludo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo '¡Ahora sí funciona!'" > ci.yml
